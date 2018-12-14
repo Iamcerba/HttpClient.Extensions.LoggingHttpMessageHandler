@@ -56,10 +56,12 @@ namespace NETFramework.Log4Net.Example
                     {
                         return this.logger.IsInfoEnabled;
                     }
+
                 case LogLevel.Warning:
                     {
                         return this.logger.IsWarnEnabled;
                     }
+
                 default:
                     {
                         throw new ArgumentOutOfRangeException(nameof(logLevel));
@@ -166,7 +168,7 @@ namespace NETFramework.Log4Net.Example
         /// <summary>
         /// Begins a logical operation scope.
         /// </summary>
-        /// <typeparam name="TState"></typeparam>
+        /// <typeparam name="TState">State.</typeparam>
         /// <param name="state">The identifier for the scope.</param>
         /// <returns>
         /// An IDisposable that ends the logical operation scope on dispose.
