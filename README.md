@@ -4,7 +4,7 @@ Provides a message handler for HttpClient which allows to enable logging of requ
 ## Installation
 You can build from the source here, or you can install the Nuget version:
 
-Install-Package System.Net.Http.LoggingHttpMessageHandler
+Install-Package HttpClient.Extensions.LoggingHttpMessageHandler
 
 ## Usage
 
