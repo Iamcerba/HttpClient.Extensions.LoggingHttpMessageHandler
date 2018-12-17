@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\System.Net.Http.LoggingHttpMessageHandler\System.Net.Http.LoggingHttpMessageHandler.csproj">
-      <Project>{731F4BB4-E14F-4865-ABF1-CB7B50C1E80F}</Project>
-      <Name>System.Net.Http.LoggingHttpMessageHandler</Name>
+    <ProjectReference Include="..\HttpClient.Extensions.LoggingHttpMessageHandler\HttpClient.Extensions.LoggingHttpMessageHandler.csproj">
+      <Project>{5c9affee-0d22-4d7d-b297-e64dc88b547e}</Project>
+      <Name>HttpClient.Extensions.LoggingHttpMessageHandler</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

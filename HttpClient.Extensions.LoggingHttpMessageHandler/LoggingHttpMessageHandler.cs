@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace System.Net.Http.LoggingHttpMessageHandler
+namespace HttpClient.Extensions.LoggingHttpMessageHandler
 {
     public class LoggingHttpMessageHandler : DelegatingHandler
     {

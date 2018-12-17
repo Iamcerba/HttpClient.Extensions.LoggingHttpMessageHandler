@@ -1,5 +1,4 @@
-﻿using System.Net.Http;
-using System.Net.Http.LoggingHttpMessageHandler;
+﻿using HttpClient.Extensions.LoggingHttpMessageHandler;
 
 namespace NETFramework.Log4Net.Example
 {
@@ -7,12 +6,12 @@ namespace NETFramework.Log4Net.Example
     {
         static void Main(string[] args)
         {
-            var messageHandler = new LoggingHttpMessageHandler(new Log4NetAdapter(typeof(HttpClient).FullName))
+            var messageHandler = new LoggingHttpMessageHandler(new Log4NetAdapter(typeof(System.Net.Http.HttpClient).FullName))
             {
                 EnableContentLogging = true
             };
 
-            using (var httpClient = new HttpClient(messageHandler))
+            using (var httpClient = new System.Net.Http.HttpClient(messageHandler))
             {
                 // omitted for brevity
             }
