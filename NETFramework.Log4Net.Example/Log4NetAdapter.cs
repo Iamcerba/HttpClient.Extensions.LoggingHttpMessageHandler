@@ -3,7 +3,6 @@ using System.Reflection;
 using log4net;
 using log4net.Core;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions.Internal;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace NETFramework.Log4Net.Example
@@ -179,5 +178,19 @@ namespace NETFramework.Log4Net.Example
         }
 
         #endregion
+    }
+
+    internal class NullScope : IDisposable
+    {
+        public static NullScope Instance { get; } = new NullScope();
+
+        private NullScope()
+        {
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+        }
     }
 }

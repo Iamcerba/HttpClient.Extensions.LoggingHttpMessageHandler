@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;net462;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;netcoreapp3.1;net5.0;netstandard2.0;net462</TargetFrameworks>
     <Authors>Alexander Shabunevich</Authors>
     <Copyright>Copyright © 2018 Alexander Shabunevich</Copyright>
     <PackageLicenseUrl>https://github.com/Iamcerba/HttpClient.Extensions.LoggingHttpMessageHandler/blob/master/LICENSE</PackageLicenseUrl>
@@ -11,14 +11,24 @@
     <PackageTags>systemnethttp, http, httpclient, logging, messagehandler, delegatinghandler</PackageTags>
     <Description>Provides a message handler for HttpClient which allows to enable logging of request/response related info. In comparison with Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler it allows to log request/response content.</Description>
     <PackageId>HttpClient.Extensions.LoggingHttpMessageHandler</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.2" Condition="'$(TargetFramework)' == 'netcoreapp1.1'" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.2" Condition="'$(TargetFramework)' == 'netcoreapp2.0'" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" Condition="'$(TargetFramework)' == 'netcoreapp2.2' Or '$(TargetFramework)' == 'net462' Or '$(TargetFramework)' == 'netstandard2.0'" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.14" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' Or '$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
 </Project>
