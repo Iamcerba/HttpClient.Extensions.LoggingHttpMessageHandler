@@ -5,7 +5,7 @@ using log4net.Core;
 using Microsoft.Extensions.Logging;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 
-namespace NETFramework.Log4Net.Example
+namespace LoggingHttpMessageHandler.Example.NET9
 {
     /// <summary>
     /// Adapter for NLog logging library.

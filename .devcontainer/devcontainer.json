@@ -1,0 +1,46 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+    "name": "HttpClient.Extensions.LoggingHttpMessageHandler Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "VARIANT": "9.0"
+        }
+    },
+    "features": {},
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.formatOnPaste": false,
+                "editor.formatOnType": false,
+                "editor.renderWhitespace": "none",
+                "editor.rulers": [
+                    120
+                ],
+                "files.associations": {
+                    "*.json": "jsonc"
+                },
+                "files.exclude": {
+                    "**/bin": true,
+                    "**/obj": true
+                },
+                "files.trimTrailingWhitespace": true,
+                "dotnet.defaultSolution": "HttpClient.Extensions.LoggingHttpMessageHandler.sln",
+                "[csharp]": {
+                    "editor.defaultFormatter": "ms-dotnettools.csharp"
+                }
+            },
+            "extensions": [
+                "eamodio.gitlens",
+                "ms-dotnettools.csharp",
+                "ms-dotnettools.csdevkit",
+                "ms-dotnettools.vscode-dotnet-runtime",
+                "pkief.material-icon-theme"
+            ]
+        }
+    },
+    "postCreateCommand": "dotnet restore",
+    "remoteUser": "vscode"
+}

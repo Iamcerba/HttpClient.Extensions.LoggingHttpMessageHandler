@@ -1,12 +1,12 @@
-﻿using HttpClient.Extensions.LoggingHttpMessageHandler;
+﻿using LoggingHandler = HttpClient.Extensions.LoggingHttpMessageHandler.LoggingHttpMessageHandler;
 
-namespace NETFramework.Log4Net.Example
+namespace LoggingHttpMessageHandler.Example.NET9
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var messageHandler = new LoggingHttpMessageHandler(new Log4NetAdapter(typeof(System.Net.Http.HttpClient).FullName))
+            var messageHandler = new LoggingHandler(new Log4NetAdapter(typeof(System.Net.Http.HttpClient).FullName))
             {
                 EnableContentLogging = true
             };
