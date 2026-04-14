@@ -9,12 +9,14 @@ Install-Package HttpClient.Extensions.LoggingHttpMessageHandler
 ## Usage
 
 ```csharp
-var messageHandler = new LoggingHttpMessageHandler(new Log4NetAdapter(typeof(HttpClient).FullName))
+using LoggingHandler = HttpClient.Extensions.LoggingHttpMessageHandler.LoggingHttpMessageHandler;
+
+var messageHandler = new LoggingHandler(new Log4NetAdapter(typeof(System.Net.Http.HttpClient).FullName))
 {
 	EnableContentLogging = true
 };
 
-using (var httpClient = new HttpClient(messageHandler))
+using (var httpClient = new System.Net.Http.HttpClient(messageHandler))
 {
     // omitted for brevity
 }

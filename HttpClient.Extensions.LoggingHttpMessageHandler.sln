@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETFramework.Log4Net.Example", "NETFramework.Log4Net.Example\NETFramework.Log4Net.Example.csproj", "{97044AE0-AEF7-4C2F-AD8A-834858C68638}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHttpMessageHandler.Example.NET9", "LoggingHttpMessageHandler.Example.NET9\LoggingHttpMessageHandler.Example.NET9.csproj", "{97044AE0-AEF7-4C2F-AD8A-834858C68638}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClient.Extensions.LoggingHttpMessageHandler", "HttpClient.Extensions.LoggingHttpMessageHandler\HttpClient.Extensions.LoggingHttpMessageHandler.csproj", "{5C9AFFEE-0D22-4D7D-B297-E64DC88B547E}"
 EndProject

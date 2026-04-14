@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug LoggingHttpMessageHandler.Example.NET9",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/LoggingHttpMessageHandler.Example.NET9/bin/Debug/net9.0/LoggingHttpMessageHandler.Example.NET9.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/LoggingHttpMessageHandler.Example.NET9",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}
